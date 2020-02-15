@@ -7,7 +7,7 @@
     <groupId>com.bytechaos</groupId>
     <artifactId>mqtt-5-for-3</artifactId>
     <description>HiveMQ extension to enable MQTT 5 feature for MQTT 3 Clients.</description>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <properties>
         <extension.name>MQTT 5 for 3 Extension</extension.name>
