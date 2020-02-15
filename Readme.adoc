@@ -1,0 +1,26 @@
+= MQTT 5 Features for MQTT 3 Clients
+
+This HiveMQ Extension enables some of the MQTT 5 Features for MQTT 3 Clients.
+
+== Features
+
+=== CleanStart
+
+MQTT 5 allows while connecting to send a CleanStart flag which says that the MQTT Broker should remove the existing
+session of the client before connecting it. The Client will like the name already suggests then have a fresh session.
+Combining this flag with the Session Expiry Interval lets the Client have an offline session after disconnecting from
+the Broker.
+
+MQTT 3 has a similar flag called CleanSession which also lets the Broker remove the existing session. The difference
+to MQTT 5 however is that after setting this flag there is no way to have an offline session for this Client without
+reconnecting again with the flag disabled.
+
+==== How to use
+
+By enabling this Feature in the config of the Extension you can use the CleanSession flag of the older MQTT versions
+like the MQTT 5 CleanStart flag. This means that the session of the Client will not be removed when this flag is used.
+By default it will then use the max Session Expiry Interval for the Client which also can be configured.
+
+==== Requirements
+
+Works with HiveMQ Community Edition 2020.1 and HiveMQ Enterprise 4.2 or newer.
