@@ -51,10 +51,3 @@ dependencies {
     integrationTestImplementation("com.hivemq:hivemq-testcontainer-junit5:${property("hivemq-testcontainer.version")}")
     integrationTestRuntimeOnly("ch.qos.logback:logback-classic:${property("logback.version")}")
 }
-
-/* ******************** checks ******************** */
-
-license {
-    header = rootDir.resolve("HEADER")
-    mapping("java", "SLASHSTAR_STYLE")
-}
